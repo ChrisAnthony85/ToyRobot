@@ -47,7 +47,7 @@ public class ToyRobotApplication {
             else if (input.equals("R") || input.equals("RIGHT")) {
                 toyRobot.turnRight();
             }
-            else if (input.startsWith("RE")) { //re, rep, report will work
+            else if (input.equals("REP") || input.equals("REPORT")) { //re, rep, report will work
                 toyRobot.report();
             }
         } catch (Exception e) {
