@@ -22,9 +22,9 @@ class ToyRobotTest {
     void place() {
         toyRobot.place(1,3, Direction.NORTH);
 
-        assertEquals(toyRobot.getX(), 1);
-        assertEquals(toyRobot.getY(), 3);
-        assertEquals(toyRobot.getDirection(), Direction.NORTH);
+        assertEquals(1, toyRobot.getX());
+        assertEquals(3, toyRobot.getY());
+        assertEquals(Direction.NORTH, toyRobot.getDirection());
     }
 
     @Test
@@ -32,18 +32,18 @@ class ToyRobotTest {
         toyRobot.place(0,0, Direction.EAST);
         toyRobot.place(4,4, Direction.WEST);
 
-        assertEquals(toyRobot.getX(), 4);
-        assertEquals(toyRobot.getY(), 4);
-        assertEquals(toyRobot.getDirection(), Direction.WEST);
+        assertEquals(4,toyRobot.getX());
+        assertEquals(4,toyRobot.getY());
+        assertEquals(Direction.WEST, toyRobot.getDirection());
     }
     @Test
     void placeOnInvalidSquare() {
         toyRobot.place(0,0, Direction.NORTH);
         toyRobot.place(6,6, Direction.EAST);
 
-        assertEquals(toyRobot.getX(), 0);
-        assertEquals(toyRobot.getY(), 0);
-        assertEquals(toyRobot.getDirection(), Direction.NORTH);
+        assertEquals(0, toyRobot.getX());
+        assertEquals(0, toyRobot.getY());
+        assertEquals(Direction.NORTH, toyRobot.getDirection());
     }
 
     @Test
@@ -52,9 +52,9 @@ class ToyRobotTest {
         toyRobot.remove();
 
         toyRobot.move();
-        assertEquals(toyRobot.getX(), -1);
-        assertEquals(toyRobot.getY(), -1);
-        assertEquals(toyRobot.getDirection(), Direction.NONE);
+        assertEquals(-1, toyRobot.getX());
+        assertEquals(-1, toyRobot.getY());
+        assertEquals(Direction.NONE, toyRobot.getDirection());
     }
 
     @Test
@@ -62,9 +62,9 @@ class ToyRobotTest {
         toyRobot.place(0,0, Direction.NORTH);
         toyRobot.move();
 
-        assertEquals(toyRobot.getX(), 0);
-        assertEquals(toyRobot.getY(), 1);
-        assertEquals(toyRobot.getDirection(), Direction.NORTH);
+        assertEquals(0, toyRobot.getX());
+        assertEquals(1, toyRobot.getY());
+        assertEquals(Direction.NORTH, toyRobot.getDirection());
     }
 
     @Test
@@ -72,9 +72,9 @@ class ToyRobotTest {
         toyRobot.place(0,4, Direction.NORTH);
         toyRobot.move();
 
-        assertEquals(toyRobot.getX(), 0);
-        assertEquals(toyRobot.getY(), 4);
-        assertEquals(toyRobot.getDirection(), Direction.NORTH);
+        assertEquals(0, toyRobot.getX());
+        assertEquals(4, toyRobot.getY());
+        assertEquals(Direction.NORTH, toyRobot.getDirection());
     }
 
     @Test
@@ -82,18 +82,18 @@ class ToyRobotTest {
         toyRobot.place(0,0, Direction.NORTH);
         toyRobot.turnRight();
 
-        assertEquals(toyRobot.getX(), 0);
-        assertEquals(toyRobot.getY(), 0);
-        assertEquals(toyRobot.getDirection(), Direction.EAST);
+        assertEquals(0, toyRobot.getX());
+        assertEquals(0, toyRobot.getY());
+        assertEquals(Direction.EAST, toyRobot.getDirection());
     }
 
     @Test
     void turnRightUnplaced() {
         toyRobot.remove();
         toyRobot.turnRight();
-        assertEquals(toyRobot.getX(), -1);
-        assertEquals(toyRobot.getY(), -1);
-        assertEquals(toyRobot.getDirection(), Direction.NONE);
+        assertEquals(-1, toyRobot.getX());
+        assertEquals(-1, toyRobot.getY());
+        assertEquals(Direction.NONE, toyRobot.getDirection());
 
     }
 
@@ -101,9 +101,9 @@ class ToyRobotTest {
     void turnLeftUnplaced() {
         toyRobot.remove();
         toyRobot.turnLeft();
-        assertEquals(toyRobot.getX(), -1);
-        assertEquals(toyRobot.getY(), -1);
-        assertEquals(toyRobot.getDirection(), Direction.NONE);
+        assertEquals(-1, toyRobot.getX());
+        assertEquals(-1, toyRobot.getY());
+        assertEquals(Direction.NONE, toyRobot.getDirection());
     }
 
     @Test
@@ -111,9 +111,9 @@ class ToyRobotTest {
         toyRobot.place(0,0, Direction.NORTH);
         toyRobot.turnLeft();
 
-        assertEquals(toyRobot.getX(), 0);
-        assertEquals(toyRobot.getY(), 0);
-        assertEquals(toyRobot.getDirection(), Direction.WEST);
+        assertEquals(0, toyRobot.getX());
+        assertEquals(0, toyRobot.getY());
+        assertEquals(Direction.WEST, toyRobot.getDirection());
     }
 
     @Test
@@ -132,9 +132,9 @@ class ToyRobotTest {
         toyRobot.turnRight();
         toyRobot.move();
 
-        assertEquals(toyRobot.getX(), 2);
-        assertEquals(toyRobot.getY(), 4);
-        assertEquals(toyRobot.getDirection(), Direction.EAST);
+        assertEquals(2, toyRobot.getX());
+        assertEquals(4, toyRobot.getY());
+        assertEquals(Direction.EAST, toyRobot.getDirection());
     }
 
     @Test
@@ -143,9 +143,9 @@ class ToyRobotTest {
         toyRobot.move();
         toyRobot.report();
 
-        assertEquals(toyRobot.getX(), 0);
-        assertEquals(toyRobot.getY(), 1);
-        assertEquals(toyRobot.getDirection(), Direction.NORTH);
+        assertEquals(0, toyRobot.getX());
+        assertEquals(1, toyRobot.getY());
+        assertEquals(Direction.NORTH, toyRobot.getDirection());
     }
 
     @Test
@@ -154,9 +154,9 @@ class ToyRobotTest {
         toyRobot.turnLeft();
         toyRobot.report();
 
-        assertEquals(toyRobot.getX(), 0);
-        assertEquals(toyRobot.getY(), 0);
-        assertEquals(toyRobot.getDirection(), Direction.WEST);
+        assertEquals(0, toyRobot.getX());
+        assertEquals(0, toyRobot.getY());
+        assertEquals(Direction.WEST, toyRobot.getDirection());
     }
 
     @Test
@@ -168,8 +168,8 @@ class ToyRobotTest {
         toyRobot.move();
         toyRobot.report();
 
-        assertEquals(toyRobot.getX(), 3);
-        assertEquals(toyRobot.getY(), 3);
-        assertEquals(toyRobot.getDirection(), Direction.NORTH);
+        assertEquals(3, toyRobot.getX());
+        assertEquals(3, toyRobot.getY());
+        assertEquals(Direction.NORTH, toyRobot.getDirection());
     }
 }

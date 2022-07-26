@@ -2,7 +2,6 @@ package util;
 
 import model.movement.PlaySquare;
 import model.movement.PlayableArea;
-import model.toy.ToyRobot;
 
 import java.util.HashSet;
 import java.util.Set;
